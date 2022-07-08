@@ -7,6 +7,8 @@ Please support me if this package is useful for you. My laptop is broken soon so
 > <https://www.buymeacoffee.com/flutter.gen>
 
 PS. if you need add any features or find problem please let me know.
+<br />
+
 All credits for this extension go to <https://github.com/sumate-sdk>
 
 <br />
