@@ -1,0 +1,77 @@
+{
+	"name": "assets-generator-flutter",
+	"displayName": "Assets Generator for Flutter",
+	"description": "Generate assets file to class for flutter",
+	"publisher": "jamon",
+	"repository": "https://github.com/sumate-sdk/assets-generator-flutter",
+	"author": {
+		"name": "SMSDK"
+	},
+	"version": "1.0.1",
+	"engines": {
+		"vscode": "^1.57.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"icon": "assets/image/icon.png",
+	"activationEvents": [
+		"onCommand:assets-generator-flutter.assets",
+		"onCommand:assets-generator-flutter.default-config-file"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "assets-generator-flutter.assets",
+				"title": "Flutter Assets Generator: Assets"
+			},
+			{
+				"command": "assets-generator-flutter.default-config-file",
+				"title": "Flutter Assets Generator: Config file"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/js-yaml": "^4.0.1",
+		"@types/lodash": "^4.14.170",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.57.0",
+		"@typescript-eslint/eslint-plugin": "^4.26.0",
+		"@typescript-eslint/parser": "^4.26.0",
+		"esbuild": "^0.14.48",
+		"eslint": "^7.27.0",
+		"glob": "^7.1.7",
+		"mocha": "^8.4.0",
+		"ts-loader": "^9.3.1",
+		"typescript": "^4.3.2",
+		"vscode-test": "^1.5.2",
+		"webpack": "^5.73.0",
+		"webpack-cli": "^4.10.0"
+	},
+	"dependencies": {
+		"js-yaml": "^4.1.0",
+		"lodash": "^4.17.21"
+	},
+	"__metadata": {
+		"id": "66758ab9-68da-453e-b2eb-963e7993aee5",
+		"publisherId": "f9bf24de-52a1-4217-a0bd-9014e61d4a3e",
+		"publisherDisplayName": "Solid Code by SMSDK",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1657319808274
+	}
+}
