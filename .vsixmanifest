@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Language="en-US" Id="assets-generator-flutter" Version="1.0.0" Publisher="SolidCodeSMSDK"/>
+    <Identity Language="en-US" Id="assets-generator-flutter" Version="1.0.0" Publisher="jamon"/>
     <DisplayName>Flutter Assets Generator</DisplayName>
     <Description xml:space="preserve">Generate assets file to class for flutter</Description>
     <Tags></Tags>
@@ -15,10 +15,10 @@
       <Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="workspace" />
       <Property Id="Microsoft.VisualStudio.Code.LocalizedLanguages" Value="" />
       
-        <Property Id="Microsoft.VisualStudio.Services.Links.Source" Value="https://github.com/sumate-sdk/assets-generator-flutter" />
-        <Property Id="Microsoft.VisualStudio.Services.Links.Getstarted" Value="https://github.com/sumate-sdk/assets-generator-flutter" />
+        <Property Id="Microsoft.VisualStudio.Services.Links.Source" Value="https://github.com/definitelyme/asset-generator-flutter.git" />
+        <Property Id="Microsoft.VisualStudio.Services.Links.Getstarted" Value="https://github.com/definitelyme/asset-generator-flutter.git" />
         
-          <Property Id="Microsoft.VisualStudio.Services.Links.GitHub" Value="https://github.com/sumate-sdk/assets-generator-flutter" />
+          <Property Id="Microsoft.VisualStudio.Services.Links.GitHub" Value="https://github.com/definitelyme/asset-generator-flutter.git" />
         
       
       

@@ -3,9 +3,9 @@
 	"displayName": "Assets Generator for Flutter",
 	"description": "Generate assets file to class for flutter",
 	"publisher": "jamon",
-	"repository": "https://github.com/sumate-sdk/assets-generator-flutter",
+	"repository": "https://github.com/definitelyme/asset-generator-flutter.git",
 	"author": {
-		"name": "SMSDK"
+		"name": "jamon"
 	},
 	"version": "1.0.1",
 	"engines": {
@@ -66,7 +66,7 @@
 	"__metadata": {
 		"id": "66758ab9-68da-453e-b2eb-963e7993aee5",
 		"publisherId": "f9bf24de-52a1-4217-a0bd-9014e61d4a3e",
-		"publisherDisplayName": "Solid Code by SMSDK",
+		"publisherDisplayName": "jamon",
 		"targetPlatform": "undefined",
 		"isApplicationScoped": false,
 		"updated": false,

@@ -7,6 +7,7 @@ Please support me if this package is useful for you. My laptop is broken soon so
 > <https://www.buymeacoffee.com/flutter.gen>
 
 PS. if you need add any features or find problem please let me know.
+All credits for this extension go to <https://github.com/sumate-sdk>
 
 <br />
 <br />
@@ -77,37 +78,37 @@ default config file for generated result
 ``` dart
 
 class Assets {
-  Assets._();
+  const Assets._();
 
-  static final sound = _AssetsSound._();
-  static final images = _AssetsImages._();
+  static const sound = _AssetsSound._();
+  static const images = _AssetsImages._();
   ...
 }
 
 ...
 
 class _AssetsSound {
-  _AssetsSound._();
+  const _AssetsSound._();
 
-  final helloWorldMP3 => "assets/sound/hello world.mp3";
-  final hiACC => "assets/hi.acc";
+  static const helloWorldMP3 => "assets/sound/hello world.mp3";
+  static const hiACC => "assets/hi.acc";
   ...
 }
 
 class _AssetsImages {
-  _AssetsImages._();
+  const _AssetsImages._();
 
-  final icon = _AssetsImagesIcon._();
-  final background = _AssetsImagesBackground._();
+  static const icon = _AssetsImagesIcon._();
+  static const background = _AssetsImagesBackground._();
   ...
 }
 
 class _AssetsImagesIcon {
-  _AssetsImagesIcon._();
+  const _AssetsImagesIcon._();
 
-  final chatIconSVG => "assets/images/icon/chatIcon.svg";
-  final facebookPNG => "assets/images/icon/Facebook.png";
-  final googlePlusJPG => "assets/images/icon/google-plus.jps";
+  static const chatIconSVG => "assets/images/icon/chatIcon.svg";
+  static const facebookPNG => "assets/images/icon/Facebook.png";
+  static const googlePlusJPG => "assets/images/icon/google-plus.jps";
   ...
 }
 
