@@ -24,11 +24,11 @@
 		"commands": [
 			{
 				"command": "assets-generator-flutter.assets",
-				"title": "Flutter Assets Generator: Assets"
+				"title": "Asset Generator for Flutter: Assets"
 			},
 			{
 				"command": "assets-generator-flutter.default-config-file",
-				"title": "Flutter Assets Generator: Config file"
+				"title": "Asset Generator for Flutter: Config file"
 			}
 		]
 	},

@@ -9,7 +9,7 @@ const generate_config_1 = require("./lib/generate_config");
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 function activate(context) {
-    console.log('Flutter Assets Generator: Activated');
+    console.log('Asset Generator for Flutter: Activated');
     let disposableAssets = vscode.commands.registerCommand('assets-generator-flutter.assets', () => {
         let getnerateAssets = new generate_assets_1.GetnerateAssets();
         getnerateAssets.generate();
@@ -23,7 +23,7 @@ function activate(context) {
 exports.activate = activate;
 // this method is called when your extension is deactivated
 function deactivate() {
-    console.debug('Flutter Assets Generator: Deactivated');
+    console.debug('Asset Generator for Flutter: Deactivated');
 }
 exports.deactivate = deactivate;
 //# sourceMappingURL=extension.js.map

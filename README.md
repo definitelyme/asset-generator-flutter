@@ -1,4 +1,4 @@
-# Flutter Assets Generator
+# Asset Generator for Flutter
 
 Please support me if this package is useful for you. My laptop is broken soon so your kindness is really help me a lot, Thanks.
 
@@ -42,9 +42,9 @@ flutter:
 
 In VSCode press `Command + Shift + P` then select option
 
-`Flutter Assets Generator: Assets` >>> Generate code from pubspec.yaml assets.
+`Asset Generator for Flutter: Assets` >>> Generate code from pubspec.yaml assets.
 
-`Flutter Assets Generator: Config file` >>> Generate generate config file `.flutgenrc` in root workplace
+`Asset Generator for Flutter: Config file` >>> Generate generate config file `.flutgenrc` in root workplace
 
 <br />
 <br />
