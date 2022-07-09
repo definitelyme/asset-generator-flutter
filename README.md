@@ -10,12 +10,14 @@ PS. if you need add any features or find problem please let me know.
 <br />
 
 All credits for this extension go to <https://github.com/sumate-sdk>
+<br>
+Main repo can be found here <https://github.com/sumate-sdk/assets-generator-flutter>
 
 <br />
 <br />
 
 ### Github
-<https://github.com/sumate-sdk/assets-generator-flutter>
+<https://github.com/definitelyme/asset-generator-flutter.git>
 
 <br />
 <br />
