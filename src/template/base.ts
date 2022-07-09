@@ -39,7 +39,7 @@ class Base {
         let classType = this.convertStringToUpperCamelCase(className);
         let staticText = this.isHead ? 'static ' : '';
         //   static final _GoogleApis googleApis = _GoogleApis._();
-        return `${staticText}const ${classVariable} = _${classType}._();`;
+        return `static const ${classVariable} = _${classType}._();`;
     }
     get getVariables() {
         return this.variables
