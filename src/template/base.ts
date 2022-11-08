@@ -16,7 +16,8 @@ class Base {
         return !this.classNameValue.includes('/');
     }
     get className() {
-        let prefix = this.isHead ? '' : '_';
+        // let prefix = this.isHead ? '' : '_';
+        let prefix = '';
         return prefix + this.getClassName(this.classNameValue);
     }
     getClassName(fileName) {
@@ -37,9 +38,9 @@ class Base {
         let variableName = lodash.last(className.split('/'));
         let classVariable = lodash.camelCase(variableName);
         let classType = this.convertStringToUpperCamelCase(className);
-        // let staticText = this.isHead ? 'static ' : '';
+        let staticText = this.isHead ? 'static ' : '';
         //   static final _GoogleApis googleApis = _GoogleApis._();
-        return `static const ${classVariable} = ${classType}._();`;
+        return `static const ${classVariable} = ___${classType}._();`;
     }
     get getVariables() {
         return this.variables
