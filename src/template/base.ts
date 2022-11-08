@@ -38,9 +38,9 @@ class Base {
         let variableName = lodash.last(className.split('/'));
         let classVariable = lodash.camelCase(variableName);
         let classType = this.convertStringToUpperCamelCase(className);
-        let staticText = this.isHead ? 'static ' : '';
+        // let staticText = this.isHead ? 'static ' : '';
         //   static final _GoogleApis googleApis = _GoogleApis._();
-        return `static const ${classVariable} = _${classType}._();`;
+        return `static const ${classVariable} = ${classType}._();`;
     }
     get getVariables() {
         return this.variables
