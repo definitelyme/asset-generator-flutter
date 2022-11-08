@@ -34,7 +34,7 @@ jobs:
         run: |
           echo ${{ env.VERSION }}
           echo ${{ github.event.inputs.version }}
-          echo PACKAGE_DOT_JSON=`sed "s|\"version\"\:.*|\"version\"\: "${{ env.VERSION }}"|g" package.json`
+          echo PACKAGE_DOT_JSON=`sed "s|\"version\"\:.*|\"version\"\: \""${{ env.VERSION }}"\"|g" package.json`
           echo $PACKAGE_DOT_JSON
           echo $PACKAGE_DOT_JSON > package.json
 
