@@ -32,8 +32,8 @@ jobs:
       - name: Bump Package Version
         if: ${{ env.VERSION != null || env.VERSION != '' }}
         run: |
-          echo PACKAGE_DOT_JSON=`sed "s|\"version\"\:.*|\"version\"\: \""${{ env.VERSION }}"\"\,|g" package.json`
-          echo $PACKAGE_DOT_JSON > package.json
+          echo PACKAGE_DOT_JSON=`sed -i "s|\"version\"\:.*|\"version\"\: \""${{ env.VERSION }}"\"\,|g" package.json`
+          # echo $PACKAGE_DOT_JSON > package.json
           cat package.json
 
       # - name: Install dependencies
