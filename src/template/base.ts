@@ -16,7 +16,8 @@ class Base {
         return !this.classNameValue.includes('/');
     }
     get className() {
-        let prefix = this.isHead ? '' : '_';
+        // let prefix = this.isHead ? '' : '_';
+        let prefix = '';
         return prefix + this.getClassName(this.classNameValue);
     }
     getClassName(fileName) {
