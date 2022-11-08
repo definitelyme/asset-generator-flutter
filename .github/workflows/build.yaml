@@ -1,5 +1,12 @@
 name: Generate VSIX
 on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Specify Version"
+        required: true
+        default: "1.1.0"
+
   push:
     branches:
       - main
@@ -11,6 +18,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ github.event.inputs.version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -20,18 +29,27 @@ jobs:
         with:
           node-version: 14
 
-      - name: Install dependencies
+      - name: Bump Package Version
         run: |
-          npm install
-          sudo npm install -g vsce --unsafe-perm=true --allow-root
+          echo ${{ env.VERSION }}
+          echo ${{ github.event.inputs.version }}
+          echo PACKAGE_DOT_JSON=`sed "s|\"version\"\:.*|\"version\"\: "${{ env.VERSION }}"|g" package.json`
+          echo $PACKAGE_DOT_JSON
+          echo $PACKAGE_DOT_JSON > package.json
 
-      - name: Build
-        run: |
-          npm run vscode:prepublish
-          vsce package
+      # - name: Install dependencies
+      #   run: |
+      #     npm install
+      #     sudo npm install -g vsce --unsafe-perm=true --allow-root
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: vsix
-          path: ./**/*.vsix
+      # - name: Build
+      #   run: |
+      #     npm run vscode:prepublish
+      #     vsce package
+
+      # - name: Upload artifact
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: vsix
+      #     path: ./**/*.vsix
+      #     retention-days: 2
