@@ -32,25 +32,22 @@ jobs:
       - name: Bump Package Version
         if: ${{ env.VERSION != null || env.VERSION != '' }}
         run: |
-          echo ${{ env.VERSION }}
-          echo ${{ github.event.inputs.version }}
-          echo PACKAGE_DOT_JSON=`sed "s|\"version\"\:.*|\"version\"\: \""${{ env.VERSION }}"\"|g" package.json`
-          echo $PACKAGE_DOT_JSON
+          echo PACKAGE_DOT_JSON=`sed "s|\"version\"\:.*|\"version\"\: \""${{ env.VERSION }}"\"\,|g" package.json`
           echo $PACKAGE_DOT_JSON > package.json
 
-      # - name: Install dependencies
-      #   run: |
-      #     npm install
-      #     sudo npm install -g vsce --unsafe-perm=true --allow-root
+      - name: Install dependencies
+        run: |
+          npm install
+          sudo npm install -g vsce --unsafe-perm=true --allow-root
 
-      # - name: Build
-      #   run: |
-      #     npm run vscode:prepublish
-      #     vsce package
+      - name: Build
+        run: |
+          npm run vscode:prepublish
+          vsce package
 
-      # - name: Upload artifact
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: vsix
-      #     path: ./**/*.vsix
-      #     retention-days: 2
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: vsix
+          path: ./**/*.vsix
+          retention-days: 2
