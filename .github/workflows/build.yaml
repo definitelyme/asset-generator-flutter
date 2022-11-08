@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run vscode:prepublish
+        run: npm run pretest
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
