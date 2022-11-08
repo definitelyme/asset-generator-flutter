@@ -30,6 +30,7 @@ jobs:
           node-version: 14
 
       - name: Bump Package Version
+        if: ${{ env.VERSION != null || env.VERSION != '' }}
         run: |
           echo ${{ env.VERSION }}
           echo ${{ github.event.inputs.version }}
