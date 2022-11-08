@@ -26,8 +26,8 @@ jobs:
       - name: Build
         run: npm run vscode:prepublish
 
-      # - name: Upload artifact
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: vsix
-      #     path: *.vsix
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: vsix
+          path: ./**/*.vsix
