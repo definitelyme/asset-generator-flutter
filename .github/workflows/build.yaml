@@ -21,10 +21,14 @@ jobs:
           node-version: 14
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          sudo npm install -g vsce --unsafe-perm=true --allow-root
 
       - name: Build
-        run: npm run compile
+        run: |
+          npm run vscode:prepublish
+          vsce package
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
