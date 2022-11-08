@@ -8,9 +8,10 @@ class AssetClassTemplate extends base_1.Base {
     let newline = `
 `;
     this._dartString = `
-class ___A_${this.className} {
-  const ___A_${this.className}._();
-${classes.length === 0 ? variables.length === 0 ? '' : newline + this.getVariables : newline + this.getClasses}
+class ${this.className} {
+  const ${this.className}._();
+  ${classes.length === 0 ? '' : newline + this.getClasses}
+  ${variables.length === 0 ? '' : newline + this.getVariables}
 }
 `;
   }
@@ -19,9 +20,8 @@ ${classes.length === 0 ? variables.length === 0 ? '' : newline + this.getVariabl
   }
   get demoString() {
     return `
-class Assets {
-  Assets._();
-
+class BaseAssets {
+  BaseAssets._();
 }
     `;
   }
