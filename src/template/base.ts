@@ -16,8 +16,7 @@ class Base {
         return !this.classNameValue.includes('/');
     }
     get className() {
-        // let prefix = this.isHead ? '' : '_';
-        let prefix = '';
+        let prefix = this.isHead ? '' : '_';
         return prefix + this.getClassName(this.classNameValue);
     }
     getClassName(fileName) {
@@ -40,7 +39,7 @@ class Base {
         let classType = this.convertStringToUpperCamelCase(className);
         let staticText = this.isHead ? 'static ' : '';
         //   static final _GoogleApis googleApis = _GoogleApis._();
-        return `static const ${classVariable} = ${classType}._();`;
+        return `static const ${classVariable} = _${classType}._();`;
     }
     get getVariables() {
         return this.variables
