@@ -22,12 +22,12 @@ jobs:
       VERSION: ${{ github.event.inputs.version }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 18
 
       - name: Bump Package Version
         if: ${{ env.VERSION != null || env.VERSION != '' }}
@@ -45,8 +45,9 @@ jobs:
           vsce package
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: vsix
           path: ./**/*.vsix
-          retention-days: 2
+          retention-days: 30
+          overwrite: true
