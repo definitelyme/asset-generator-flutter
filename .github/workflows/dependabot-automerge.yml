@@ -15,17 +15,24 @@ jobs:
     steps:
       - name: 'Wait for status checks'
         id: waitforstatuschecks
-        uses: WyriHaximus/github-action-wait-for-status@v1.2.0
+        uses: "WyriHaximus/github-action-wait-for-status@v2"
         with:
-          ignoreActions: worker,WIP
+          ignoreActions: "Automerge PRs" ## Note that these names are the human readable names use as status on commits, and show up as status checks on PRs.
           checkInterval: 60
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: 'Auto Merge PRs'
-        uses: pascalgn/automerge-action@v0.11.0
+        id: automerge
+        uses: "pascalgn/automerge-action@v0.4.0"
         if: steps.waitforstatuschecks.outputs.status == 'success'
         env:
-          MERGE_LABELS: ''
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          LABELS: automerge
+          MERGE_LABELS: "automerge,!work in progress"
           MERGE_DELETE_BRANCH: true
+
+      - name: Feedback
+        if: ${{ steps.automerge.outputs.mergeResult == 'merged' }}
+        run: |
+          echo "Pull request ${{ steps.automerge.outputs.pullRequestNumber }} merged!"
