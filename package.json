@@ -62,7 +62,7 @@
 	"dependencies": {
 		"js-yaml": "4.1.0",
 		"lodash": "4.17.21",
-		"undici": "^7.3.0"
+		"undici": "^7.5.0"
 	},
 	"__metadata": {
 		"id": "66758ab9-68da-453e-b2eb-963e7993aee5",
